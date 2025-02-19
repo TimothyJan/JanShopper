@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JanShopper.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55a33b6996d3a255355802ed53cd634f119ee5dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0efa706e366546024e659580838b4f6cbd086941")]
 [assembly: System.Reflection.AssemblyProductAttribute("JanShopper.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JanShopper.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JanShopper.Server.Repositories
 {
-    public class UserRepository
+    public class UserRepository : InterfaceUserRepository
     {
         private readonly JanShopperDbContext _context;
 

@@ -23,5 +23,5 @@ Process:
       <li>Create Repositories(UserRepository) with async methods to abstract data access logic, promotes separation of concerns, and makes the code cleaner, more maintainable, and easier to test.</li>
       <li></li>
     </ul>
-  <li>
+  </li>
 </ul>

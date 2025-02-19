@@ -29,9 +29,9 @@ namespace JanShopper.Server.Repositories
         }
 
         // Get a user by ID
-        public async Task<UserProfileDTO> GetUserByIdAsync(int userId)
+        public async Task<UserProfileDTO?> GetUserByIdAsync(int userId)
         {
-            var user = await _context.Users
+            return await _context.Users
                 .Where(u => u.UserID == userId)
                 .Select(u => new UserProfileDTO
                 {
@@ -40,12 +40,10 @@ namespace JanShopper.Server.Repositories
                     Email = u.Email
                 })
                 .FirstOrDefaultAsync();
-
-            return user;
         }
 
         // Get a user by email
-        public async Task<User> GetUserByEmailAsync(string email)
+        public async Task<User?> GetUserByEmailAsync(string email)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == email);

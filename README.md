@@ -19,6 +19,7 @@ Process:
           <li>UserProfileDTO for read operations where validation is not needed.</li>
         </ul>
       </li>
+      <li>Create Database Context JanShopperDbContext. The DbContext simplifies database interactions, manages entities and their relationships, and ensures data consistency.</li>
       <li></li>
     </ul>
   <li>

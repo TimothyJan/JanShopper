@@ -12,6 +12,13 @@ Process:
           <li><code>Microsoft.EntityFrameworkCore.Tools</code></li>
         </ul>
       </li>
+      <li>Create Models(User) with data annotations.</li>
+      <li>Create DTOs to transfer only the required data between the client and server.
+        <ul>User
+          <li>UserRegistrationDTO for write operations where validation is critical.</li>
+          <li>UserProfileDTO for read operations where validation is not needed.</li>
+        </ul>
+      </li>
       <li></li>
     </ul>
   <li>

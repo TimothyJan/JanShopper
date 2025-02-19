@@ -20,6 +20,7 @@ Process:
         </ul>
       </li>
       <li>Create Database Context JanShopperDbContext. The DbContext simplifies database interactions, manages entities and their relationships, and ensures data consistency.</li>
+      <li>Create Repositories(UserRepository) with async methods to abstract data access logic, promotes separation of concerns, and makes the code cleaner, more maintainable, and easier to test.</li>
       <li></li>
     </ul>
   <li>

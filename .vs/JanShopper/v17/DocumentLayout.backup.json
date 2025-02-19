@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\models\\janshopperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\models\\janshopperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,26 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\User\\User.cs",
-              "RelativeDocumentMoniker": "JanShopper.Server\\Models\\User\\User.cs",
-              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\User\\User.cs",
-              "RelativeToolTip": "JanShopper.Server\\Models\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T20:49:25.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "JanShopperDbContext.cs",
               "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\JanShopperDbContext.cs",
               "RelativeDocumentMoniker": "JanShopper.Server\\Models\\JanShopperDbContext.cs",
               "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\JanShopperDbContext.cs",
               "RelativeToolTip": "JanShopper.Server\\Models\\JanShopperDbContext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowBAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowB4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T20:33:57.356Z",
               "EditorCaption": ""

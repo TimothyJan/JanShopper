@@ -65,6 +65,26 @@ Process:
           <li>~<code>dotnet ef database update</code></li>
         </ul>
       </li>
+      <li>Seed database with dummy data.
+        <ul>
+          <li>Create SeedData.cs.</li>
+          <li>Modify Program.cs to call the <code>SeedData.Initialize</code> method during application startup.</li>
+          <li>Add migrations and apply to the database to create tables.
+            <ul>
+              <li>Add Migration: ~<code>dotnet ef migrations add SeedDataMigration</code></li>
+              <li>Apply Migration: ~<code>dotnet ef database update</code></li>
+            </ul>
+          </li>
+          <li>Clean and Recreate Database (Development Only)
+            <ul>
+              <li>~<code>dotnet ef database drop</code></li>
+              <li>~<code>dotnet ef migrations remove</code></li>
+              <li>~<code>dotnet ef migrations add InitialCreate</code></li>
+              <li>~<code>dotnet ef database update</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li>Test all methods on Swagger.
       </li>
       <li></li>

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JanShopper.Server.Migrations
 {
     [DbContext(typeof(JanShopperDbContext))]
-    [Migration("20250219235754_InitialCreate")]
+    [Migration("20250220182100_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

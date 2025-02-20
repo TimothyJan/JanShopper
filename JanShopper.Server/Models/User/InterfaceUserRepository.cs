@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using JanShopper.Server.Models;
 
-namespace JanShopper.Server.Models
+namespace JanShopper.Server.Repositories
 {
     public interface InterfaceUserRepository
     {

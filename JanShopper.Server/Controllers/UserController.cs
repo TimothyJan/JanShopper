@@ -8,9 +8,9 @@ namespace JanShopper.Server.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserRepository _userRepository;
+        private readonly InterfaceUserRepository _userRepository;
 
-        public UserController(UserRepository userRepository)
+        public UserController(InterfaceUserRepository userRepository)
         {
             _userRepository = userRepository;
         }

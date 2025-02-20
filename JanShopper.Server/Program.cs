@@ -1,14 +1,15 @@
 using JanShopper.Server;
 using JanShopper.Server.Models;
+using JanShopper.Server.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<JanShopperDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("JanShopperDbConnection")));
 
-builder.Services.AddScoped<InterfaceUserRepository, InterfaceUserRepository>();
+builder.Services.AddScoped<InterfaceUserRepository, UserRepository>();
 
 builder.Services.AddControllers();
 
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();

@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "sdRQqz4s8TGqwXFFnhUAvv5g1nDKYqQha4AnqQMbPKg=",
+  "Source": "JanShopper.Server",
+  "BasePath": "_content/JanShopper.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\janshopper.client\\janshopper.client.esproj",
+      "Version": 2,
+      "Source": "janshopper.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

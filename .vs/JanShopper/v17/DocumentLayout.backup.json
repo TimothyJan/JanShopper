@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,8 +26,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250219235359_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs",
+              "RelativeDocumentMoniker": "JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs",
+              "RelativeToolTip": "JanShopper.Server\\Migrations\\20250219235359_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:53:59.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250219234733_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs",
+              "RelativeDocumentMoniker": "JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs",
+              "RelativeToolTip": "JanShopper.Server\\Migrations\\20250219234733_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:47:33.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "JanShopper.Server\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "JanShopper.Server\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:42:26.492Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -30,15 +81,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "JanShopper.Server\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\UserController.cs",
-              "RelativeToolTip": "JanShopper.Server\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAawDMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T21:59:25.215Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "JanShopper.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\appsettings.json",
+              "RelativeToolTip": "JanShopper.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T23:31:06.332Z",
               "EditorCaption": ""
             }
           ]

@@ -170,3 +170,4 @@ C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\JanShopper.Server.pdb
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\JanShopper.Server.genruntimeconfig.cache
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\ref\JanShopper.Server.dll
+C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\bin\Debug\net8.0\BCrypt.Net-Next.dll

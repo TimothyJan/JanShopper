@@ -10,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<JanShopperDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("JanShopperDbConnection")));
 
-builder.Services.AddScoped<InterfaceUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddControllers();
 

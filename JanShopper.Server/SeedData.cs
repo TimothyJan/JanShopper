@@ -38,6 +38,18 @@ namespace JanShopper.Server.Data
                     }
                 );
 
+                context.Categories.AddRange(
+                    new Category { 
+                        Name = "Electronics" 
+                    },
+                    new Category { 
+                        Name = "Fashion" 
+                    },
+                    new Category { 
+                        Name = "Food" 
+                    }
+                );
+
                 await context.SaveChangesAsync();
             }
         }

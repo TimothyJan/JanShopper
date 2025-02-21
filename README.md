@@ -46,9 +46,10 @@ Process:
           <li><code>Microsoft.EntityFrameworkCore</code></li>
           <li><code>Microsoft.EntityFrameworkCore.SqlServer</code></li>
           <li><code>Microsoft.EntityFrameworkCore.Tools</code></li>
+          <li>For password hashing in UserRepository: Install BCrypt.Net: ~<code>Install-Package BCrypt.Net-Next</code></li>   
         </ul>
       </li>
-      <li>Create Models(User) with data annotations.</li>
+      <li>Create Models(User, Category, Product) with data annotations.</li>
       <li>Create DTOs to transfer only the required data between the client and server.
         <ul>User
           <li>UserRegistrationDTO for write operations where validation is critical.</li>
@@ -56,7 +57,8 @@ Process:
         </ul>
       </li>
       <li>Create Database Context JanShopperDbContext. The DbContext simplifies database interactions, manages entities and their relationships, and ensures data consistency.</li>
-      <li>Create Repositories and InterfaceRepositories for each model with async methods to abstract data access logic, promotes separation of concerns, and makes the code cleaner, more maintainable, and easier to test.</li>
+      <li>Create Repositories and IRepositories(Interface) for each model with async methods to abstract data access logic, promotes separation of concerns, and makes the code cleaner, more maintainable, and easier to test.
+      </li>
       <li>Create Controllers for each model to handle incoming HTTP requests, process the HTTP requests, and return appropriate responses.</li>
       <li>Configure Program.cs to use connection string to SQL Server.</li>
       <li>Create migrations and apply to the database to create tables. 

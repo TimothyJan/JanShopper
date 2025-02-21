@@ -8,9 +8,9 @@ namespace JanShopper.Server.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly InterfaceUserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
 
-        public UserController(InterfaceUserRepository userRepository)
+        public UserController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
@@ -44,31 +44,26 @@ namespace JanShopper.Server.Controllers
                 return BadRequest(ModelState); // 400 Bad Request with validation errors
             }
 
-            // Check if the email or username already exists
-            var existingUserByEmail = await _userRepository.GetUserByEmailAsync(userRegistrationDTO.Email);
-            if (existingUserByEmail != null)
+            try
             {
-                return Conflict("Email already exists."); // 409 Conflict
+                var createdUser = await _userRepository.CreateUserAsync(userRegistrationDTO);
+                return CreatedAtAction(nameof(GetUserById), new { id = createdUser.Id }, createdUser); // 201 Created
             }
-
-            // Add the new user
-            await _userRepository.AddUserAsync(userRegistrationDTO);
-
-            // Return the created user (without password)
-            var createdUser = await _userRepository.GetUserByEmailAsync(userRegistrationDTO.Email);
-            if (createdUser == null)
+            catch (InvalidOperationException ex)
             {
-                return StatusCode(500, "An error occurred while retrieving the created user."); // 500 Internal Server Error
+                return Conflict(ex.Message); // 409 Conflict if user already exists
             }
-
-            return CreatedAtAction(nameof(GetUserById), new { id = createdUser.UserID }, createdUser); // 201 Created
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while creating the user."); // 500 Internal Server Error
+            }
         }
 
         // PUT: api/user/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UserProfileDTO userProfileDTO)
         {
-            if (id != userProfileDTO.UserID)
+            if (id != userProfileDTO.Id)
             {
                 return BadRequest("ID mismatch."); // 400 Bad Request
             }
@@ -78,13 +73,12 @@ namespace JanShopper.Server.Controllers
                 return BadRequest(ModelState); // 400 Bad Request with validation errors
             }
 
-            var existingUser = await _userRepository.GetUserByIdAsync(id);
-            if (existingUser == null)
+            var result = await _userRepository.UpdateUserAsync(userProfileDTO);
+            if (!result)
             {
-                return NotFound(); // 404 Not Found
+                return NotFound(); // 404 Not Found if user does not exist
             }
 
-            await _userRepository.UpdateUserAsync(userProfileDTO);
             return NoContent(); // 204 No Content
         }
 
@@ -92,13 +86,12 @@ namespace JanShopper.Server.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _userRepository.GetUserByIdAsync(id);
-            if (user == null)
+            var result = await _userRepository.DeleteUserAsync(id);
+            if (!result)
             {
-                return NotFound(); // 404 Not Found
+                return NotFound(); // 404 Not Found if user does not exist
             }
 
-            await _userRepository.DeleteUserAsync(id);
             return NoContent(); // 204 No Content
         }
     }

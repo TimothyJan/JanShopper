@@ -1,9 +1,10 @@
-﻿using JanShopper.Server.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using JanShopper.Server.Models;
+using BCrypt.Net; // For password hashing
 
 namespace JanShopper.Server.Repositories
 {
-    public class UserRepository : InterfaceUserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly JanShopperDbContext _context;
 
@@ -18,21 +19,21 @@ namespace JanShopper.Server.Repositories
             return await _context.Users
                 .Select(u => new UserProfileDTO
                 {
-                    UserID = u.UserID,
+                    Id = u.Id,
                     UserName = u.UserName,
                     Email = u.Email
                 })
                 .ToListAsync();
         }
 
-        // Get a user by ID
-        public async Task<UserProfileDTO?> GetUserByIdAsync(int userId)
+        // Get a user by Id
+        public async Task<UserProfileDTO?> GetUserByIdAsync(int Id)
         {
             return await _context.Users
-                .Where(u => u.UserID == userId)
+                .Where(u => u.Id == Id)
                 .Select(u => new UserProfileDTO
                 {
-                    UserID = u.UserID,
+                    Id = u.Id,
                     UserName = u.UserName,
                     Email = u.Email
                 })
@@ -40,49 +41,82 @@ namespace JanShopper.Server.Repositories
         }
 
         // Get a user by email
-        public async Task<User?> GetUserByEmailAsync(string email)
+        public async Task<UserProfileDTO?> GetUserByEmailAsync(string email)
         {
             return await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == email);
+                .Where(u => u.Email == email)
+                .Select(u => new UserProfileDTO
+                {
+                    Id = u.Id,
+                    UserName = u.UserName,
+                    Email = u.Email
+                })
+                .FirstOrDefaultAsync();
         }
 
         // Add a new user
-        public async Task AddUserAsync(UserRegistrationDTO userRegistrationDTO)
+        public async Task<UserProfileDTO> CreateUserAsync(UserRegistrationDTO userRegistrationDTO)
         {
+            // Check if the user already exists
+            var existingUser = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == userRegistrationDTO.Email || u.UserName == userRegistrationDTO.UserName);
+
+            if (existingUser != null)
+            {
+                throw new InvalidOperationException("A user with the same email or username already exists.");
+            }
+
+            // Hash the password
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userRegistrationDTO.Password);
+
+            // Create the new user
             var user = new User
             {
                 UserName = userRegistrationDTO.UserName,
                 Email = userRegistrationDTO.Email,
-                Password = userRegistrationDTO.Password // Note: Hash the password before saving
+                Password = hashedPassword // Store the hashed password
             };
 
+            // Add the user to the database
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+            // Return the created user as a UserProfileDTO
+            return new UserProfileDTO
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Email = user.Email
+            };
         }
 
         // Update a user
-        public async Task UpdateUserAsync(UserProfileDTO userProfileDTO)
+        public async Task<bool> UpdateUserAsync(UserProfileDTO userProfileDTO)
         {
-            var user = await _context.Users.FindAsync(userProfileDTO.UserID);
-            if (user != null)
+            var user = await _context.Users.FindAsync(userProfileDTO.Id);
+            if (user == null)
             {
-                user.UserName = userProfileDTO.UserName;
-                user.Email = userProfileDTO.Email;
-
-                _context.Users.Update(user);
-                await _context.SaveChangesAsync();
+                return false; // User not found
             }
+
+            user.UserName = userProfileDTO.UserName;
+            user.Email = userProfileDTO.Email;
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         // Delete a user
-        public async Task DeleteUserAsync(int userId)
+        public async Task<bool> DeleteUserAsync(int userId)
         {
             var user = await _context.Users.FindAsync(userId);
-            if (user != null)
+            if (user == null)
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                return false; // User not found
             }
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

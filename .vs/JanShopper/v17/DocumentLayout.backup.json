@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\models\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\models\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "JanShopper.Server\\Models\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\User\\UserRepository.cs",
-              "RelativeToolTip": "JanShopper.Server\\Models\\User\\UserRepository.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T18:16:58.395Z",
-              "EditorCaption": ""
             }
           ]
         },

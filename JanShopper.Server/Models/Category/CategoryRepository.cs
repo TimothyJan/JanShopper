@@ -23,10 +23,10 @@ namespace JanShopper.Server.Repositories
                 .ToListAsync();
         }
 
-        public async Task<CategoryDTO?> GetCategoryByIdAsync(int categoryId)
+        public async Task<CategoryDTO?> GetCategoryByIdAsync(int id)
         {
             return await _context.Categories
-                .Where(c => c.Id == categoryId)
+                .Where(c => c.Id == id)
                 .Select(c => new CategoryDTO 
                 { 
                     Id = c.Id, 
@@ -61,9 +61,9 @@ namespace JanShopper.Server.Repositories
             return true;
         }
 
-        public async Task<bool> DeleteCategoryAsync(int categoryId)
+        public async Task<bool> DeleteCategoryAsync(int id)
         {
-            var category = await _context.Categories.FindAsync(categoryId);
+            var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {
                 return false;

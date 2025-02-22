@@ -27,10 +27,10 @@ namespace JanShopper.Server.Repositories
         }
 
         // Get a user by Id
-        public async Task<UserProfileDTO?> GetUserByIdAsync(int Id)
+        public async Task<UserProfileDTO?> GetUserByIdAsync(int id)
         {
             return await _context.Users
-                .Where(u => u.Id == Id)
+                .Where(u => u.Id == id)
                 .Select(u => new UserProfileDTO
                 {
                     Id = u.Id,
@@ -106,9 +106,9 @@ namespace JanShopper.Server.Repositories
         }
 
         // Delete a user
-        public async Task<bool> DeleteUserAsync(int userId)
+        public async Task<bool> DeleteUserAsync(int id)
         {
-            var user = await _context.Users.FindAsync(userId);
+            var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
                 return false; // User not found

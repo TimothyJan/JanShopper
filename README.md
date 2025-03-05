@@ -93,3 +93,13 @@ Process:
     </ul>
   </li>
 </ul>
+
+Database Schema
+<ul>
+  <li>User: <code>Id, UserName, Email, Password</code></li>
+  <li>Category: <code>Id, Name</code></li>
+  <li>Product: <code>Id, Name, Description, Price, Stock, CategoryId</code></li>
+  <li>Order: <code>Id, UserId, OrderDate, TotalAmount, Status</code></li>
+  <li>OrderItems: <code>Id, OrderId, ProductId, Quantity, Price</code></li>
+  <li>Payment: <code>Id, OrderId, PaymentDate, Amount, PaymentMethod</code></li>
+</ul>

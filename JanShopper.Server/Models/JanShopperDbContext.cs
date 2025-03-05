@@ -8,6 +8,8 @@ namespace JanShopper.Server
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItems> OrderItems { get; set; }
 
         public JanShopperDbContext(DbContextOptions<JanShopperDbContext> options) : base(options) { }
 
@@ -37,6 +39,33 @@ namespace JanShopper.Server
                     .HasForeignKey(p => p.CategoryId);
                 entity.Property(p => p.Price)
                     .HasPrecision(18, 2);
+            });
+
+            // Order entity
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.Property(o => o.TotalAmount)
+                      .HasPrecision(18, 2); // Set precision to 18 and scale to 2
+            });
+
+            // OrderItems entity
+            modelBuilder.Entity<OrderItems>(entity =>
+            {
+                // Configure the relationship between OrderItems and Order
+                entity.HasOne(oi => oi.Order)
+                      .WithMany(o => o.OrderItems)
+                      .HasForeignKey(oi => oi.OrderId)
+                      .OnDelete(DeleteBehavior.Cascade); // Cascade delete if Order is deleted
+
+                // Configure the relationship between OrderItems and Product
+                entity.HasOne(oi => oi.Product)
+                      .WithMany(p => p.OrderItems)
+                      .HasForeignKey(oi => oi.ProductId)
+                      .OnDelete(DeleteBehavior.Restrict); // Prevent deletion if Product is referenced
+
+                // Configure Price precision
+                entity.Property(oi => oi.Price)
+                      .HasPrecision(18, 2);
             });
         }
     }

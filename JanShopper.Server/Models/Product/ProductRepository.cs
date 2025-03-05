@@ -69,7 +69,7 @@ namespace JanShopper.Server.Repositories
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            productDTO.Id = product.Id;
+            productDTO.Id = product.Id;  // Set the generated ID
             return productDTO;
         }
 

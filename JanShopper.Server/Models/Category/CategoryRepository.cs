@@ -44,7 +44,7 @@ namespace JanShopper.Server.Repositories
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
 
-            categoryDTO.Id = category.Id;
+            categoryDTO.Id = category.Id;  // Set the generated ID
             return categoryDTO;
         }
 

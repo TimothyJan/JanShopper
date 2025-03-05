@@ -13,6 +13,8 @@ builder.Services.AddDbContext<JanShopperDbContext>(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderItemsRepository, OrderItemsRepository>();
 
 builder.Services.AddControllers();
 

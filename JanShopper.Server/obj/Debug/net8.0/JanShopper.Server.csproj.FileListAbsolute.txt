@@ -171,3 +171,7 @@ C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\JanShopper.Server.genruntimeconfig.cache
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\ref\JanShopper.Server.dll
 C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\bin\Debug\net8.0\JanShopper.Server.staticwebassets.endpoints.json
+C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\staticwebassets\msbuild.JanShopper.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\janti\OneDrive\Documents\GitHub\JanShopper\JanShopper.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

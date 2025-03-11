@@ -26,5 +26,8 @@ namespace JanShopper.Server.Models
         [Required(ErrorMessage = "Status is required.")]
         [StringLength(50, ErrorMessage = "Status cannot exceed 50 characters.")]
         public string Status { get; set; } // e.g., "Pending", "Shipped", "Completed", "Cancelled"
+
+        // Navigation property for OrderItems
+        public ICollection<OrderItems> OrderItems { get; set; } = new List<OrderItems>();
     }
 }

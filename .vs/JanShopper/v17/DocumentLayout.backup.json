@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\models\\janshopperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\models\\janshopperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|c:\\users\\janti\\onedrive\\documents\\github\\janshopper\\janshopper.server\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76ABD668-A42B-4DE2-B341-1233056854CD}|JanShopper.Server\\JanShopper.Server.csproj|solutionrelative:janshopper.server\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,15 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JanShopperDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\JanShopperDbContext.cs",
-              "RelativeDocumentMoniker": "JanShopper.Server\\Models\\JanShopperDbContext.cs",
-              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Models\\JanShopperDbContext.cs",
-              "RelativeToolTip": "JanShopper.Server\\Models\\JanShopperDbContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\SeedData.cs",
+              "RelativeDocumentMoniker": "JanShopper.Server\\SeedData.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\SeedData.cs",
+              "RelativeToolTip": "JanShopper.Server\\SeedData.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowAgBAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T20:02:28.421Z",
+              "WhenOpened": "2025-03-11T19:27:22.301Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\OrderItemsController.cs",
+              "RelativeDocumentMoniker": "JanShopper.Server\\Controllers\\OrderItemsController.cs",
+              "ToolTip": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\JanShopper\\JanShopper.Server\\Controllers\\OrderItemsController.cs",
+              "RelativeToolTip": "JanShopper.Server\\Controllers\\OrderItemsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T19:26:55.375Z"
             }
           ]
         },

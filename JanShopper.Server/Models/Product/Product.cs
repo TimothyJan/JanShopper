@@ -28,5 +28,8 @@ namespace JanShopper.Server.Models
 
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
+
+        // Navigation property for OrderItems
+        public ICollection<OrderItems> OrderItems { get; set; } = new List<OrderItems>();
     }
 }

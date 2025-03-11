@@ -125,7 +125,8 @@ namespace JanShopper.Server.Data
                 await context.SaveChangesAsync(); // Save products to generate IDs
 
                 // Add dummy orders
-                context.Orders.AddRange(
+                var orders = new List<Order>
+                {
                     new Order
                     {
                         UserId = johnDoe.Id,
@@ -189,9 +190,79 @@ namespace JanShopper.Server.Data
                         TotalAmount = 4.00m, // Granola Bars
                         Status = "Completed"
                     }
+                };
+
+                context.Orders.AddRange(orders);
+                await context.SaveChangesAsync(); // Save orders to generate IDs
+
+                // Add dummy order items
+                context.OrderItems.AddRange(
+                    new OrderItems
+                    {
+                        OrderId = orders[0].Id, // Laptop order
+                        ProductId = laptop.Id,
+                        Quantity = 1,
+                        Price = 1200.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[1].Id, // Smartphone order
+                        ProductId = smartphone.Id,
+                        Quantity = 1,
+                        Price = 800.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[2].Id, // Headphones order
+                        ProductId = headphones.Id,
+                        Quantity = 1,
+                        Price = 250.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[3].Id, // T-Shirt order
+                        ProductId = tShirt.Id,
+                        Quantity = 1,
+                        Price = 20.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[4].Id, // Jeans order
+                        ProductId = jeans.Id,
+                        Quantity = 1,
+                        Price = 50.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[5].Id, // Sneakers order
+                        ProductId = sneakers.Id,
+                        Quantity = 1,
+                        Price = 80.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[6].Id, // Chocolate Bar order
+                        ProductId = chocolateBar.Id,
+                        Quantity = 1,
+                        Price = 5.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[7].Id, // Energy Drink order
+                        ProductId = energyDrink.Id,
+                        Quantity = 1,
+                        Price = 3.00m
+                    },
+                    new OrderItems
+                    {
+                        OrderId = orders[8].Id, // Granola Bars order
+                        ProductId = granolaBars.Id,
+                        Quantity = 1,
+                        Price = 4.00m
+                    }
                 );
 
-                await context.SaveChangesAsync(); // Save orders
+                await context.SaveChangesAsync(); // Save order items
             }
         }
     }

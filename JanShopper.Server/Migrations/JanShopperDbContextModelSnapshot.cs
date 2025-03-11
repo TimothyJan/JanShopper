@@ -73,6 +73,36 @@ namespace JanShopper.Server.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("JanShopper.Server.Models.OrderItems", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("JanShopper.Server.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -153,6 +183,25 @@ namespace JanShopper.Server.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("JanShopper.Server.Models.OrderItems", b =>
+                {
+                    b.HasOne("JanShopper.Server.Models.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JanShopper.Server.Models.Product", "Product")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("JanShopper.Server.Models.Product", b =>
                 {
                     b.HasOne("JanShopper.Server.Models.Category", "Category")
@@ -167,6 +216,16 @@ namespace JanShopper.Server.Migrations
             modelBuilder.Entity("JanShopper.Server.Models.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("JanShopper.Server.Models.Order", b =>
+                {
+                    b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("JanShopper.Server.Models.Product", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
         }

@@ -26,5 +26,8 @@ namespace JanShopper.Server.Models
 
         // Optional: Include only the category name for simplicity
         public string CategoryName { get; set; }
+
+        // Navigation property for OrderItems
+        public ICollection<OrderItems> OrderItems { get; set; } = new List<OrderItems>();
     }
 }

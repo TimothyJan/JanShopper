@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sdRQqz4s8TGqwXFFnhUAvv5g1nDKYqQha4AnqQMbPKg=",
+  "Hash": "nBZeYKY6lETxGGKr9GyOzVN6Psd0OIRCUBHdmv2aPg4=",
   "Source": "JanShopper.Server",
   "BasePath": "_content/JanShopper.Server",
   "Mode": "Default",
@@ -19,5 +19,6 @@
     }
   ],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
